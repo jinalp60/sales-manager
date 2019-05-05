@@ -9,7 +9,7 @@ const addProduct= async (req,res,next) =>{
     //const errors=validationResult(req);
     console.log("Product:",req.body.newProduct);
     
-    //let result =await Products.create(req.body.newProduct);
+    const result =await Products.create(req.body.newProduct);
     res.status(200).json({message:"1 row inserted"});
    
 }

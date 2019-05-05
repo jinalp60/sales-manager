@@ -12,6 +12,16 @@ services:
      - authentication
      - product
 
+  product-db:
+    restart: always
+    #image : sameersbn/postgresql:10-1
+    container_name: product-db
+    build: ./product/productDB/
+    volumes:
+      - ./product/productDB/migration.sql:/docker-entrypoint-initdb.d/migration.sql
+    ports:
+      - '5432:5432'
+      
   authentication:
     container_name: authentication
     build: ./authentication/

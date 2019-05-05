@@ -8,7 +8,11 @@ module.exports = (sequelize) => {
     basePrice: Sequelize.INTEGER,
     minPrice: Sequelize.INTEGER,
     maxPrice: Sequelize.INTEGER
-  }, {});
+  }, {
+    schema: 'public' ,
+    createdAt : 'created_at',
+    updatedAt : 'updated_at',
+  });
   products.associate = function(models) {
     // associations can be defined here
   };
