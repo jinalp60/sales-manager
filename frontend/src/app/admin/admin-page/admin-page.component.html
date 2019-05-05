@@ -1,0 +1,35 @@
+<!-- <p>
+  admin-page works!
+</p>
+<a routerLink="/home" (click)="signOut()">Sign out</a> -->
+
+<div class="sidenav">
+  <img class="websiteLogoImg" src="../../../assets/sales-counter-transparent.png" />
+  <a routerLink="/admin/sellProduct">Sell Product</a>
+  <!--dropdown-->
+  <button class="dropdown-btn-product">Product Catalogue 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a routerLink="/admin/addProduct">Add Product</a>
+    <a routerLink="/admin/productDetails">Product Details</a>
+  </div>
+  <!-- dropdown ends -->
+  <!--dropdown-->
+  <button class="dropdown-btn-client">Client Info 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a routerLink="/admin/addClient">Add Client</a>
+    <a href="javascript:void(0);">Client Details</a>
+  </div>
+  <!-- dropdown ends -->
+  <a href="javascript:void(0);">Analyze Sell</a>
+  <a routerLink="/home" (click)="signOut()">Sign out</a>
+</div>
+
+<div class="main">
+  <div [@routeAnimations]="prepareRoute(outlet)" >
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+</div>

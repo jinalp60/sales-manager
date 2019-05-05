@@ -1,0 +1,27 @@
+<!-- <p>
+  add-client works!
+</p> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+      <div class="form-container">
+        <h3>Add Client</h3>
+        <form (ngSubmit)="addCustomer()" class="formStart">
+          <div>
+            <label for="newCustomer.customerName">Client Name</label>
+            <input type="text" id="newCustomer.customerName" [(ngModel)]="newCustomer.customerName" name="newCustomer.customerName"/>
+          </div>
+          <div>
+            <label for="newCustomer.phoneNumber">Phone Number</label>
+            <input type="number" id="newCustomer.phoneNumber" [(ngModel)]="newCustomer.phoneNumber" name="newCustomer.phoneNumber"/>
+          </div>
+          <div>
+              <button type="submit">Click me</button>
+          </div>
+            
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

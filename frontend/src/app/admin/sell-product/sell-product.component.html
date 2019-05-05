@@ -1,0 +1,39 @@
+<!-- <p>
+  sell-product works!
+</p> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+      <div class="form-container">
+        <h3>Sell Product</h3>
+        <form (ngSubmit)="sellProduct()" class="formStart">
+          <div>
+            <label for="phoneNo">Phone Number</label>
+            <input type="number" [(ngModel)]="phoneNo" id="phoneNo" name="phoneNo"/>
+          </div>
+          <div>
+            <label for="productName">Product Name</label>
+            <input type="text" [(ngModel)]="productName" id="productName" name="productName"/>
+          </div>
+          <div>
+            <label for="quantity">Quantity</label>
+            <input type="number" [(ngModel)]="quantity" id="quantity" name="quantity"/>
+          </div>
+          <div>
+            <label for="sellingPrice">Selling Price</label>
+            <input type="number" [(ngModel)]="sellingPrice" id="sellingPrice" name="sellingPrice"/>
+          </div>
+          <div>
+              <label for="moneyPaid">Money Paid</label>
+              <input type="number" [(ngModel)]="moneyPaid" id="moneyPaid" name="moneyPaid"/>
+            </div>
+          <div>
+              <button type="submit">Click me</button>
+          </div>
+            
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

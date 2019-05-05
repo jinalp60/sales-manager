@@ -1,0 +1,64 @@
+.salesCounterLogoImg{
+    width: 20%;
+    height: 20%;
+    margin-left: 88%;
+    margin-top: 5%;
+}
+.loginBox{
+    width: 120%;
+    margin-left: 39%;
+    margin-top: 8%;
+    border: 1.2px solid #6d2b34b7;
+    border-radius: 5px;
+}
+.signInHeading{
+    margin-left: 67%;
+    margin-top: 2%;
+    width:120%;
+}
+.signInData{
+    width:120%;
+    margin-left: 39%;
+    margin-top: 10%;
+}
+.googleLogoImg{
+    width:9%;
+    height:9%;
+}
+.signInBtnGoogle{
+    margin-top:10%;
+    margin-left:5%;
+    margin-right:5%;
+    border-radius: 10px;
+    color:black;
+    text-align: left;
+    padding-left:5%;
+}
+.facebookLogoImg{
+    width:9%;
+    height:9%;
+}
+.signInBtnFacebook{
+    margin-top:10%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    color:black;
+    text-align: left;
+    padding-left:5%;
+}
+.signUpData{
+    margin-left:73%;
+    margin-top:10%;
+    width:120%;
+}
+.signUpText{
+    margin-left:65%;
+    margin-top:10%;
+    width:120%;
+}
+.logInBtn{
+    margin-top:-10%;
+    margin-bottom: 10%;
+}

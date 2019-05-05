@@ -1,0 +1,26 @@
+<!-- <p>
+  login-user-input works!
+</p> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+      <h3>Login</h3>
+      <form (ngSubmit)="userLogin()">
+        <div>
+          <label for="userName">User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input type="text" id="userName" [(ngModel)]="userName" name="userName" style="color:black"/>
+        </div>
+        <div style="margin-top:10px;">
+          <label for="userPassword">User Password</label>
+          <input type="text" id="userPassword" [(ngModel)]="userPassword" name="userPassword" style="color:black"/>
+        </div>
+        <div>
+          <button type="submit" style="color:black;margin-top:10px;">Click me</button>
+        </div>
+        
+      </form>
+    <div>{{error}}</div>
+    </div>
+  </div>
+</div>

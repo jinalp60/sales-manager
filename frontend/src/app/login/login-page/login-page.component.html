@@ -1,0 +1,51 @@
+<!-- <p>
+  login-page works!
+</p> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+      <img class="salesCounterLogoImg" src="../../../assets/sales-counter-transparent.png" />
+      
+      <!-- Sign in -->
+      <div *ngIf="signInToggle">
+        <h3 class="signInHeading">&nbsp;&nbsp;&nbsp;Welcome back. </h3>
+        <p class="signInData">Sign in to access your personalized homepage, and do a lot more things like viewing product catalog, base price of products, sales etc etc....</p>
+        <div class="loginBox">
+          <div >
+            <button class="signInBtnGoogle" (click)="signInGoogle()"><img class="googleLogoImg" src="../../../assets/google-logo-transparent.png">   Sign in with Google</button>
+          </div>
+          <div >
+            <button class="signInBtnFacebook" (click)="signInWithFB()"><img class="facebookLogoImg" src="../../../assets/facebook-logo-transparent.png">   Sign in with Facebook</button>
+          </div>
+          <div class="logInBtn">
+            <button class="signInBtnGoogle" routerLink="/login"><img class="facebookLogoImg" src="../../../assets/sales-counter-transparent.png">   Sign in </button>
+          </div>
+        </div>
+        <!-- link to sign up -->
+        <div class="signUpData">
+          No account? <a href="javascript:void(0)" style="color:#140709b7;" (click)="signInUpToggle()">Create one.</a>
+        </div>
+      </div>
+      <!--sign Up-->
+      <div *ngIf="!signInToggle">
+        <h3 class="signInHeading">Join SampleProject.</h3>
+        <p class="signInData">Sign up to access your personalized homepage, and do a lot more things like viewing product catalog, base price of products, sales etc etc....</p>
+        <div class="loginBox">
+          <div >
+            <button class="signInBtnGoogle" (click)="signInGoogle()"><img class="googleLogoImg" src="../../../assets/google-logo-transparent.png">   Sign up with Google</button>
+          </div>
+          <div >
+            <button class="signInBtnFacebook" (click)="signInWithFB()"><img class="facebookLogoImg" src="../../../assets/facebook-logo-transparent.png">   Sign up with Facebook</button>
+          </div>
+        </div>
+        <!-- link to sign up -->
+        <div class="signUpText">
+          Already have an account? <a href="javascript:void(0)" style="color:#140709b7;" (click)="signInUpToggle()">Sign in.</a>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>

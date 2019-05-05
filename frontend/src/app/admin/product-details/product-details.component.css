@@ -1,0 +1,25 @@
+
+.form-container{
+    margin-left:12%;
+}
+input{
+    border-radius: 10px;
+    color:black;
+}
+
+h3{
+    margin-left:28%;
+}
+table{
+    width:95%;
+}
+th,td{
+    padding-left:10px;
+}
+.pagination-control{
+    margin-left:-5%;
+    margin-top:1%;
+}
+.searchTable{
+    margin-left:-1%;
+}
