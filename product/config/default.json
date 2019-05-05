@@ -1,0 +1,22 @@
+{
+	"product": {
+		"config": {
+			"host": "127.0.0.1",
+			"port": 8082,
+			"baseUrl":""
+		}
+	},
+	"authentication": {
+		"config": {
+			"host": "127.0.0.1",
+			"port": 8081,
+			"baseUrl":""
+		}
+	},
+	"api-gateway":{
+		"config": {
+			"host": "192.168.99.100",
+			"port": 8087
+		}
+	}
+}

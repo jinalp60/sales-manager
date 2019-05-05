@@ -1,0 +1,23 @@
+/api:
+    /auth:
+        post:
+        {username, password}
+    /tokenValidation:
+        post:
+        {token}
+    
+/product:
+    /addProduct:
+        post:
+            {"newProduct": {
+                "productId": "shriHari567",
+                "productName": "product2",
+                "quantity": 2,
+                "basePrice": 20,
+                "minPrice": 25,
+                "maxPrice": 30
+                }
+            }
+    /fetchProductDetails:
+        get:
+

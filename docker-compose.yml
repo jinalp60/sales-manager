@@ -1,0 +1,47 @@
+version: '3.4'
+
+services:
+  nginx-sm:
+    image: nginx:1-alpine
+    volumes: 
+      - './nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf'
+    ports:
+      - '8087:81'
+    tty: true
+    depends_on:
+     - authentication
+     - product
+
+  authentication:
+    container_name: authentication
+    build: ./authentication/
+    volumes:
+      - './authentication/:/src'
+      # - './services/ms1/package.json:/usr/src/package.json'
+    ports:
+      - '8081:8081' # expose ports - HOST:CONTAINER
+    environment:
+      - NODE_ENV=${NODE_ENV}
+
+  product:
+    container_name: product
+    build: ./product/
+    volumes:
+      - './product/:/src'
+      #- './utils:/src'
+      # - './services/ms2/package.json:/usr/src/package.json'
+    ports:
+      - '8082:8082' # expose ports - HOST:CONTAINER
+    environment:
+      - NODE_ENV=${NODE_ENV}
+  
+  frontend-sm:
+    container_name: frontend-sm
+    build: ./frontend/ 
+
+    ports:
+      - '4200:4200' # expose ports - HOST:CONTAINER
+    environment:
+      - NODE_ENV=${NODE_ENV}
+  
+
