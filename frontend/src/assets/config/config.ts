@@ -1,9 +1,9 @@
 export const config = {
-  "auth": {
-    "authUrl":"/api/auth"
+  auth: {
+    authUrl: '/api/auth'
   },
-  "product":{
-      "addProduct":"/product/addProduct",
-      "fetchProductDetails":"/product/fetchProductDetails"
+  product: {
+    addProduct: '/product/addProduct',
+    fetchProductDetails: '/product/fetchProductDetails'
   }
 };

@@ -7,44 +7,58 @@
     <div class="col-md-4">
       <div class="form-container">
         <h3>Product details</h3>
-        
       </div>
     </div>
-
   </div>
   <div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-2 searchTable">
-      <input type="text" [(ngModel)]="term" placeholder="Search">
+      <input type="text" [(ngModel)]="term" placeholder="Search" />
     </div>
   </div>
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
       <div>
-        <table border="1" class='main-table' style="margin-top:20px;">
+        <table border="1" class="main-table" style="margin-top:20px;">
           <tr class="colorBlueWhite" align="center">
             <th>Sr. No</th>
             <th>productId</th>
             <th>productName</th>
             <th>quantity</th>
-            <th>basePrice</th>
-            <th>minPrice</th>
-            <th>maxPrice</th>
+            <th>costPrice</th>
+            <th>salePrice</th>
+            <th>addQuantity</th>
+            <th>deleteProduct</th>
           </tr>
-          <tr *ngFor="let product of products | filter:term | paginate: { itemsPerPage: 10, currentPage: p }; let i= index">
-            <td>{{((p-1)*10)+(i+1)}}</td>
-            <td>{{product['productId']}}</td>
-            <td>{{product['productName']}}</td>
-            <td>{{product['quantity']}}</td>
-            <td>{{product['basePrice']}}</td>
-            <td>{{product['minPrice']}}</td>
-            <td>{{product['maxPrice']}}</td>
+          <tr
+            *ngFor="
+              let product of products
+                | filter: term
+                | paginate: { itemsPerPage: 10, currentPage: p };
+              let i = index
+            "
+          >
+            <td>{{ (p - 1) * 10 + (i + 1) }}</td>
+            <td>{{ product['productId'] }}</td>
+            <td>{{ product['productName'] }}</td>
+            <td>{{ product['quantity'] }}</td>
+            <td>{{ product['costPrice'] }}</td>
+            <td>{{ product['salePrice'] }}</td>
+            <td>
+              <input
+                name="addQuantity"
+                id="addQuantity"
+                [(ngmodel)]="addQuantity"
+                name="addQuantity"
+              />
+            </td>
+            <td><button>Delete Product</button></td>
           </tr>
         </table>
       </div>
       <div class="pagination-control">
-        <pagination-controls  (pageChange)="p = $event"></pagination-controls>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
       </div>
     </div>
   </div>

@@ -7,26 +7,26 @@ import { AdminServiceService } from '../admin-service.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-
-  products=[];
+  products = [];
   p: number = 1;
   term: string;
+  addQuantity: number;
 
-  constructor(private adminService: AdminServiceService) { }
+  constructor(private adminService: AdminServiceService) {}
 
   ngOnInit() {
     this.sellProduct();
   }
-  sellProduct(){
-  
+  sellProduct() {
     //call service and save this product
-    this.adminService.fetchProductDetailsService().subscribe(data=>{
-      console.log("success",data);
-      this.products=data["result"];
-    },
-    error=>{
-      console.log("error");
-    });
-    
+    this.adminService.fetchProductDetailsService().subscribe(
+      data => {
+        console.log('success', data);
+        this.products = data['result'];
+      },
+      error => {
+        console.log('error');
+      }
+    );
   }
 }
