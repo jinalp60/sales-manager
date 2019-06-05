@@ -5,9 +5,8 @@ module.exports = (sequelize) => {
     productId: Sequelize.STRING,
     productName: Sequelize.STRING,
     quantity: Sequelize.INTEGER,
-    basePrice: Sequelize.INTEGER,
-    minPrice: Sequelize.INTEGER,
-    maxPrice: Sequelize.INTEGER
+    costPrice: Sequelize.INTEGER,
+    salePrice: Sequelize.INTEGER
   }, {
     schema: 'public' ,
     createdAt : 'created_at',
