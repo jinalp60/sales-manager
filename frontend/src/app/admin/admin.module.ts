@@ -14,7 +14,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { SellProductComponent } from './sell-product/sell-product.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { AdminServiceService } from './admin-service.service';
-import { AddClientComponent } from './add-client/add-client.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { AddProductQuantityModalComponent } from './add-product-quantity-modal/add-product-quantity-modal.component';
@@ -36,7 +36,7 @@ import { AddProductQuantityModalComponent } from './add-product-quantity-modal/a
     AdminPageComponent,
     SellProductComponent,
     AddProductComponent,
-    AddClientComponent,
+    AddCustomerComponent,
     ProductDetailsComponent,
     CustomerDetailsComponent,
     AddProductQuantityModalComponent

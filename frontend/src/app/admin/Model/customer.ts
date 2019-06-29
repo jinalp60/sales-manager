@@ -1,4 +1,6 @@
 export class Customer {
-    public customerName: string;
-    public phoneNumber: number;
+  public firstName: string;
+  public lastName: string;
+  public phoneNumber: number;
+  public city: string;
 }

@@ -4,7 +4,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { AuthGuard } from '../../app/auth.guard';
 import { AddProductComponent } from './add-product/add-product.component';
 import { SellProductComponent } from './sell-product/sell-product.component';
-import { AddClientComponent } from './add-client/add-client.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 const routes: Routes = [
   {
@@ -26,10 +26,10 @@ const routes: Routes = [
         data: { animation: 'SellProductPage' }
       },
       {
-        path: 'addClient',
-        component: AddClientComponent,
+        path: 'addCustomer',
+        component: AddCustomerComponent,
         canActivate: [AuthGuard],
-        data: { animation: 'AddClientPage' }
+        data: { animation: 'AddCustomerPage' }
       },
       {
         path: 'productDetails',
