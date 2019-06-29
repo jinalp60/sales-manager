@@ -12,7 +12,7 @@ import { LoginUserInputComponent } from './login-user-input/login-user-input.com
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider("101742750952-7fpsniind579uanbatp14lc547ttlhj4.apps.googleusercontent.com")
+    provider: new GoogleLoginProvider("798538665428-s5ht0kt6rkau9e8n22uj3a4bukcc1e3l.apps.googleusercontent.com")
   },
   {
     id: FacebookLoginProvider.PROVIDER_ID,

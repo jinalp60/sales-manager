@@ -1,25 +1,33 @@
+button {
+  background: transparent;
+  color: white;
+  border-radius: 3px;
+  /* margin-left: 40%;
+  margin-top: 10%; */
+  font-size: 90%;
+}
+.form-container {
+  margin-left: 12%;
+}
+input {
+  border-radius: 10px;
+  color: black;
+}
 
-.form-container{
-    margin-left:12%;
+h3 {
+  margin-left: 28%;
 }
-input{
-    border-radius: 10px;
-    color:black;
+table {
+  width: 95%;
 }
-
-h3{
-    margin-left:28%;
+th,
+td {
+  padding-left: 10px;
 }
-table{
-    width:95%;
+.pagination-control {
+  margin-left: -5%;
+  margin-top: 1%;
 }
-th,td{
-    padding-left:10px;
-}
-.pagination-control{
-    margin-left:-5%;
-    margin-top:1%;
-}
-.searchTable{
-    margin-left:-1%;
+.searchTable {
+  margin-left: -1%;
 }

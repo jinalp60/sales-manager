@@ -3,14 +3,14 @@ version: '3.4'
 services:
   nginx-sm:
     image: nginx:1-alpine
-    volumes: 
+    volumes:
       - './nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf'
     ports:
       - '8087:81'
     tty: true
     depends_on:
-     - authentication
-     - product
+      - authentication
+      - product
 
   product-db:
     restart: always
@@ -21,7 +21,7 @@ services:
       - ./product/productDB/migration.sql:/docker-entrypoint-initdb.d/migration.sql
     ports:
       - '5432:5432'
-      
+
   authentication:
     container_name: authentication
     build: ./authentication/
@@ -44,14 +44,12 @@ services:
       - '8082:8082' # expose ports - HOST:CONTAINER
     environment:
       - NODE_ENV=${NODE_ENV}
-  
+
   frontend-sm:
     container_name: frontend-sm
-    build: ./frontend/ 
+    build: ./frontend/
 
     ports:
       - '4200:4200' # expose ports - HOST:CONTAINER
     environment:
       - NODE_ENV=${NODE_ENV}
-  
-
