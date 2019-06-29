@@ -20,8 +20,8 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
       <div>
-        <table border="1" class="main-table" style="margin-top:20px;">
-          <tr class="colorBlueWhite" align="center">
+        <table border="1" style="margin-top:20px;">
+          <tr align="center">
             <th>Sr. No</th>
             <th>productId</th>
             <th>productName</th>
@@ -46,14 +46,9 @@
             <td>{{ product['costPrice'] }}</td>
             <td>{{ product['salePrice'] }}</td>
             <td>
-              <input
-                name="addQuantity"
-                id="addQuantity"
-                [(ngmodel)]="addQuantity"
-                name="addQuantity"
-              />
+              <button (click)="addProductQuantity(product)">Add Quantity</button>
             </td>
-            <td><button>Delete Product</button></td>
+            <td><button (click)="deleteProduct(product.productId)">Delete Product</button></td>
           </tr>
         </table>
       </div>

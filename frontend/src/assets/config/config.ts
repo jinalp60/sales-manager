@@ -4,6 +4,8 @@ export const config = {
   },
   product: {
     addProduct: '/product/addProduct',
-    fetchProductDetails: '/product/fetchProductDetails'
+    fetchProductDetails: '/product/fetchProductDetails',
+    addProductQuantity: '/product/addProductQuantity',
+    deleteProduct: '/product/deleteProduct'
   }
 };

@@ -28,6 +28,20 @@ export class AdminServiceService {
       this.getOptionsWithToken()
     );
   }
+  addProductQuantityService(newProduct) {
+    const { productId, addQuantity } = newProduct;
+    return this.http.patch(
+      '/api' + config.product.addProductQuantity,
+      { productId, addQuantity },
+      this.getOptionsWithToken()
+    );
+  }
+  deleteProductService(productId) {
+    return this.http.delete(
+      '/api' + config.product.deleteProduct + '/' + productId,
+      this.getOptionsWithToken()
+    );
+  }
   addCustomerService(newCustomer: Customer) {
     // console.log("service client",newClient);
     return this.http.post(

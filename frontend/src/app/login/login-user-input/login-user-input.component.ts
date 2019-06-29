@@ -8,20 +8,22 @@ import { LoginServiceService } from '../login-service.service';
   styleUrls: ['./login-user-input.component.css']
 })
 export class LoginUserInputComponent implements OnInit {
+  userName: string;
+  userPassword: string;
+  error: string = null;
 
-  userName:string;
-  userPassword:string;
-  error:string=null;
- 
-  constructor(private loginService:LoginServiceService,private router: Router) { }
+  constructor(private loginService: LoginServiceService, private router: Router) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  userLogin(){
-    console.log("logging in user",this.userName);
-    this.loginService.authenticateUserLogin(this.userName,this.userPassword).subscribe(
-      result => this.router.navigate(['admin']),
-      err => this.error = 'Could not authenticate');
+  userLogin() {
+    console.log('logging in user', this.userName);
+    //this.router.navigate(['admin']);
+    this.loginService
+      .authenticateUserLogin(this.userName, this.userPassword)
+      .subscribe(
+        result => this.router.navigate(['admin']),
+        err => (this.error = 'Could not authenticate')
+      );
   }
 }
