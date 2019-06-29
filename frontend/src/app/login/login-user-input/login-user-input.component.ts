@@ -18,7 +18,7 @@ export class LoginUserInputComponent implements OnInit {
 
   userLogin() {
     console.log('logging in user', this.userName);
-    //this.router.navigate(['admin']);
+    // this.router.navigate(['admin']);
     this.loginService
       .authenticateUserLogin(this.userName, this.userPassword)
       .subscribe(
