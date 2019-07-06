@@ -22,7 +22,7 @@ export class AuthGuard implements CanActivate {
     }
     console.log('third case');
     this.router.navigate(['login']);
-    //this.router.navigate(['admin']);
+    // this.router.navigate(['admin']);
     return false;
   }
 }

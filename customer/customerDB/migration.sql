@@ -1,0 +1,1 @@
+CREATE TABLE customers ("id" SERIAL PRIMARY KEY, "firstName" VARCHAR(255), "lastName" VARCHAR(255),"phoneNumber" INT,"city" VARCHAR(255),"created_at" TIMESTAMP,"updated_at" TIMESTAMP,"deleted_at" TIMESTAMP);

@@ -12,6 +12,17 @@ services:
       - authentication
       - product
 
+  customer-db:
+    restart: always
+    #image : sameersbn/postgresql:10-1
+    container_name: customer-db
+
+    build: ./customer/customerDB/
+    volumes:
+      - ./customer/customerDB/migration.sql:/docker-entrypoint-initdb.d/migration.sql
+    ports:
+      - '5433:5432'
+
   product-db:
     restart: always
     #image : sameersbn/postgresql:10-1
@@ -42,6 +53,18 @@ services:
       # - './services/ms2/package.json:/usr/src/package.json'
     ports:
       - '8082:8082' # expose ports - HOST:CONTAINER
+    environment:
+      - NODE_ENV=${NODE_ENV}
+
+  customer:
+    container_name: customer
+    build: ./customer/
+    volumes:
+      - './customer/:/src'
+      #- './utils:/src'
+      # - './services/ms2/package.json:/usr/src/package.json'
+    ports:
+      - '8083:8083' # expose ports - HOST:CONTAINER
     environment:
       - NODE_ENV=${NODE_ENV}
 

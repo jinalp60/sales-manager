@@ -15,7 +15,7 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private adminService: AdminServiceService, private modalService: NgbModal) {}
 
   ngOnInit() {
-    this.sellProduct();
+    this.fetchProductDetails();
   }
   deleteProduct(productId) {
     console.log('productId:', productId);
@@ -23,7 +23,7 @@ export class ProductDetailsComponent implements OnInit {
       data => {
         console.log('success', data);
         //this.products = data['result'];
-        this.sellProduct();
+        this.fetchProductDetails();
       },
       error => {
         console.log('error');
@@ -42,15 +42,15 @@ export class ProductDetailsComponent implements OnInit {
       data => {
         console.log('success', data);
         //this.products = data['result'];
-        this.sellProduct();
+        this.fetchProductDetails();
       },
       error => {
         console.log('error');
       }
     );
   }
-  sellProduct() {
-    //call service and save this product
+  fetchProductDetails() {
+    //call service to fetch product details
     // this.products = [
     //   {
     //     costPrice: -1,

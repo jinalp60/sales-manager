@@ -1,4 +1,11 @@
 {
+  "customer": {
+    "config": {
+      "host": "192.168.99.100",
+      "port": 8083,
+      "baseUrl": "/customer"
+    }
+  },
   "product": {
     "config": {
       "host": "192.168.99.100",

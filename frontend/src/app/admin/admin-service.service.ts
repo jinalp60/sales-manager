@@ -45,7 +45,7 @@ export class AdminServiceService {
   addCustomerService(newCustomer: Customer) {
     // console.log("service client",newClient);
     return this.http.post(
-      'http://localhost:8000/customer/addCustomer',
+      '/api' + config.customer.addCustomer,
       { newCustomer },
       this.getOptionsWithToken()
     );
