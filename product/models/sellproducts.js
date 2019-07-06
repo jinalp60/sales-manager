@@ -1,8 +1,8 @@
 'use strict';
 const Sequelize = require('sequelize');
 module.exports = sequelize => {
-  const sellProduct = sequelize.define(
-    'sellProduct',
+  const sellproducts = sequelize.define(
+    'sellproducts',
     {
       phoneNumber: Sequelize.INTEGER,
       productId: Sequelize.STRING,
@@ -19,8 +19,8 @@ module.exports = sequelize => {
       // deletedAt: 'deleted_at'
     }
   );
-  sellProduct.associate = function(models) {
+  sellproducts.associate = function(models) {
     // associations can be defined here
   };
-  return sellProduct;
+  return sellproducts;
 };
