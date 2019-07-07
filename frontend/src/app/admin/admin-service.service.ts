@@ -50,15 +50,13 @@ export class AdminServiceService {
       this.getOptionsWithToken()
     );
   }
-  sellProductService(phoneNo, productName, quantity, sellingPrice, moneyPaid) {
+  sellProductService(sellProduct) {
     // console.log("service client",newClient);
-    return this.http.post('http://localhost:8000/sellProduct', {
-      phoneNo: phoneNo,
-      productName: productName,
-      quantity: quantity,
-      sellingPrice: sellingPrice,
-      moneyPaid: moneyPaid
-    });
+    return this.http.post(
+      '/api' + config.product.sellProduct,
+      { sellProduct },
+      this.getOptionsWithToken()
+    );
   }
   fetchProductDetailsService() {
     console.log('fetching product details');

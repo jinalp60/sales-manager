@@ -6,7 +6,8 @@ export const config = {
     addProduct: '/product/addProduct',
     fetchProductDetails: '/product/fetchProductDetails',
     addProductQuantity: '/product/addProductQuantity',
-    deleteProduct: '/product/deleteProduct'
+    deleteProduct: '/product/deleteProduct',
+    sellProduct: '/product/sellProduct'
   },
   customer: {
     addCustomer: '/customer/addCustomer'

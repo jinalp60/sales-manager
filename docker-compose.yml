@@ -11,6 +11,7 @@ services:
     depends_on:
       - authentication
       - product
+      - customer
 
   customer-db:
     restart: always
@@ -55,6 +56,9 @@ services:
       - '8082:8082' # expose ports - HOST:CONTAINER
     environment:
       - NODE_ENV=${NODE_ENV}
+    depends_on:
+      - authentication
+      - product-db
 
   customer:
     container_name: customer
@@ -67,6 +71,9 @@ services:
       - '8083:8083' # expose ports - HOST:CONTAINER
     environment:
       - NODE_ENV=${NODE_ENV}
+    depends_on:
+      - authentication
+      - customer-db
 
   frontend-sm:
     container_name: frontend-sm
