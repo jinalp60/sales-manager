@@ -9,29 +9,36 @@
         <h3>Sell Product</h3>
         <form (ngSubmit)="sellProduct()" class="formStart">
           <div>
-            <label for="phoneNo">Phone Number</label>
-            <input type="number" [(ngModel)]="phoneNo" id="phoneNo" name="phoneNo"/>
+            <label for="sell_product.phoneNumber">Phone Number</label>
+            <input
+              type="number"
+              [(ngModel)]="sell_product.phoneNumber"
+              id="sell_product.phoneNumber"
+              name="sell_product.phoneNumber"
+            />
           </div>
           <div>
-            <label for="productName">Product Name</label>
-            <input type="text" [(ngModel)]="productName" id="productName" name="productName"/>
+            <label for="sell_product.productName">Product Name</label>
+            <input
+              type="text"
+              [(ngModel)]="sell_product.productName"
+              id="sell_product.productName"
+              name="sell_product.productName"
+            />
           </div>
           <div>
-            <label for="quantity">Quantity</label>
-            <input type="number" [(ngModel)]="quantity" id="quantity" name="quantity"/>
+            <label for="sell_product.quantity">Quantity</label>
+            <input
+              type="number"
+              [(ngModel)]="sell_product.quantity"
+              id="sell_product.quantity"
+              name="sell_product.quantity"
+            />
           </div>
+
           <div>
-            <label for="sellingPrice">Selling Price</label>
-            <input type="number" [(ngModel)]="sellingPrice" id="sellingPrice" name="sellingPrice"/>
+            <button type="submit">Click me</button>
           </div>
-          <div>
-              <label for="moneyPaid">Money Paid</label>
-              <input type="number" [(ngModel)]="moneyPaid" id="moneyPaid" name="moneyPaid"/>
-            </div>
-          <div>
-              <button type="submit">Click me</button>
-          </div>
-            
         </form>
       </div>
     </div>

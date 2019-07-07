@@ -74,3 +74,12 @@ services:
     depends_on:
       - authentication
       - customer-db
+
+  frontend-sm:
+    container_name: frontend-sm
+    build: ./frontend/
+
+    ports:
+      - '4200:4200' # expose ports - HOST:CONTAINER
+    environment:
+      - NODE_ENV=${NODE_ENV}
